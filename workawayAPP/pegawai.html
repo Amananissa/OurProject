@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aplikasi Perjalanan Dinas</title>
+  <link rel="stylesheet" type="text/css" href="css/pegawai.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+        <img src="img/logoworkaway.png" alt="Work Away">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li class="separator"></li>
+          <li><span>Perjalanan Dinas</span></li>
+          <li><a href="#permohonan">Permohonan</a></li>
+          <li><a href="#penugasan">Penugasan</a></li>
+          <li><a href="#laporan">Laporan</a></li>
+        </ul>
+      </nav>
+      <div class="logout">
+        <a href="#logout" class="btn-logout">Logout</a>
+      </div>
+    </div>
+    <div class="content">
+      <div id="dashboard" class="page">
+        <h1>Dashboard</h1>
+        <p class="pegawai">Pegawai</p>
+        <div class="box">
+            <h2>Permohonan</h2>
+            <div class="status green">Disetujui <span class="jumlah-angka">3</span></div>
+            <div class="status red">Ditolak <span class="jumlah-angka">2</span></div>
+            <div class="status blue">Belum Dikonfirmasi <span class="jumlah-angka">1</span></div>
+        </div>
+        <div class="box">
+            <h2>Penugasan</h2>
+            <div class="status green">Sudah Terlaksana <span class="jumlah-angka">5</span></div>
+            <div class="status blue">Belum Terlaksana <span class="jumlah-angka">2</span></div>
+        </div>
+        <div class="box">
+            <h2>Laporan Perjalanan</h2>
+            <div class="status green">Disetujui <span class="jumlah-angka">4</span></div>
+            <div class="status red">Revisi <span class="jumlah-angka">1</span></div>
+            <div class="status blue">Belum Dikonfirmasi <span class="jumlah-angka">3</span></div>
+        </div>
+        <div class="box">
+            <h2>Laporan Keuangan</h2>
+            <div class="status green">Disetujui <span class="jumlah-angka">7</span></div>
+            <div class="status red">Revisi<span class="jumlah-angka">2</span></div>
+            <div class="status blue">Belum Dikonfirmasi<span class="jumlah-angka">4</span></div>
+        </div>
+      </div>
+
+
+      <div id="profile" class="page">
+        <h1>Profile</h1>
+        <p class="pegawai">Pegawai</p>
+        <div class="profile-container">
+          <div class="profile-picture">
+              <img src="profile.jpg" alt="Foto Profil">
+              <button id="change-picture">Ganti Foto Profil</button>
+          </div>
+          <div class="profile-details">
+            <section class="kanan">
+              <div class="profile-row">
+                  <div class="field">Nama</div>
+                  <input type="text" id="nama">
+              </div>
+              
+              <div class="profile-row">
+                  <div class="field">Email</div>
+                  <input type="email" id="email">
+              </div>
+              
+              <div class="profile-row">
+                  <div class="field">Tempat Lahir</div>
+                  <input type="text" id="tempat-lahir">
+              </div>
+              
+              <div class="profile-row">
+                  <div class="field">NPWP</div>
+                  <input type="text" id="npwp">
+              </div>
+              
+              <div class="profile-row">
+                  <div class="field">NIK</div>
+                  <input type="text" id="nik">
+              </div>
+              
+              <div class="profile-row">
+                  <div class="field">Golongan</div>
+                  <input type="text" id="golongan">
+              </div>
+              
+              <div class="profile-row">
+                  <div class="field">Alamat</div>
+                  <textarea id="alamat"></textarea>
+              </div>
+            </section>
+            <section class="kiri">
+              <div class="profile-row">
+                <div class="field">Password</div>
+                <input type="password" id="password">
+            </div>
+            <div class="profile-row">
+              <div class="field">No Telepon</div>
+              <input type="tel" id="telepon">
+          </div>
+          <div class="profile-row">
+            <div class="field">Tanggal Lahir</div>
+            <input type="date" id="tanggal-lahir">
+        </div>
+        <div class="profile-row">
+          <div class="field">Status Pegawai</div>
+          <input type="text" id="status-pegawai">
+        </div>
+        <div class="profile-row">
+          <div class="field">NIP</div>
+          <input type="text" id="nip">
+        </div>
+        <div class="profile-row">
+          <div class="field">Jenis Kelamin</div>
+          <input type="text" id="jenis-kelamin">
+      </div>
+      <section class="simpan-perubahan">
+      <button id="save-changes">Simpan Perubahan</button>
+      </section>
+    </section>
+          </div>
+      </div>
+      </div>
+
+
+      <div id="permohonan" class="page">
+        <h1>Permohonan</h1>
+        <p class="pegawai">Daftar Data Permohonan</p>
+        <div class="table-container">
+          <div class="atas-tabel">
+          <div class="search-column">
+              <input type="text" placeholder="Cari...">
+          </div>
+          <div class="add-column">
+              <button><a href="#tambah-permohonan">Tambah</a></button>
+          </div>
+          </div>
+          <table class="data-table">
+              <thead>
+                  <tr>
+                      <th>No</th>
+                      <th>ID</th>
+                      <th>Jenis Program</th>
+                      <th>Tujuan</th>
+                      <th>Tanggal Pengajuan</th>
+                      <th>Status</th>
+                      <th>Surat Rekomendasi/SK</th>
+                      <th>SPPD</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Isi tabel di sini -->
+                  <tr>
+                    <td>1</td>
+                    <td>PD001</td>
+                    <td>Rapat Kerja</td>
+                    <td>Jakarta</td>
+                    <td>2023-11-05</td>
+                    <td>
+                      <div class="ket hijau">
+                        <div class="icon"></div>
+                        Disetujui
+                      </div>
+                    </td>
+                    <td><a href="surat1.pdf">Lihat</a></td>
+                    <td><a href="sppd1.pdf">Lihat</a></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>PD002</td>
+                    <td>Training</td>
+                    <td>Surabaya</td>
+                    <td>2023-11-10</td>
+                    <td>
+                      <div class="ket merah">
+                        <div class="icon"></div>
+                        Ditolak
+                      </div>
+                    </td>
+                    <td><a href="surat2.pdf">Lihat</a></td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>PD003</td>
+                    <td>Kunjungan Kerja</td>
+                    <td>Bandung</td>
+                    <td>2023-11-15</td>
+                    <td>
+                      <div class="ket biru">
+                        <div class="icon"></div>
+                        Belum Dikonfirmasi
+                      </div>
+                    </td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      </div>
+
+
+
+      <div id="penugasan" class="page">
+        <h1>Penugasan</h1>
+        <p class="pegawai">Daftar Data Penugasan</p>
+        <div class="table-container">
+          <div class="search-column">
+              <input type="text" placeholder="Cari...">
+          </div>
+          <table class="data-table">
+              <thead>
+                  <tr>
+                      <th>No</th>
+                      <th>ID</th>
+                      <th>Jenis Program</th>
+                      <th>Tujuan</th>
+                      <th>Tanggal Mulai</th>
+                      <th>SPPD</th>
+                      <th>Rincian Biaya</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Isi tabel di sini -->
+                  <tr>
+                    <td>1</td>
+                    <td>PD001</td>
+                    <td>Rapat Kerja</td>
+                    <td>Jakarta</td>
+                    <td>2023-11-05</td>
+                    <td><a href="sppd1.pdf">Lihat</a></td>
+                    <td><a href="rincianbiaya1.pdf">Lihat</a></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>PD002</td>
+                    <td>Training</td>
+                    <td>Surabaya</td>
+                    <td>2023-11-10</td>
+                    <td><a href="sppd1.pdf">Lihat</a></td>
+                    <td><a href="rincianbiaya1.pdf">Lihat</a></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>PD003</td>
+                    <td>Kunjungan Kerja</td>
+                    <td>Bandung</td>
+                    <td>2023-11-15</td>
+                    <td><a href="sppd1.pdf">Lihat</a></td>
+                    <td><a href="rincianbiaya1.pdf">Lihat</a></td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      </div>
+
+
+      <div id="laporan" class="page">
+        <h1>Laporan</h1>
+        <p class="pegawai">Laporan Perjalanan Dinas</p>
+        <div class="table-container">
+          <div class="search-column">
+              <input type="text" placeholder="Cari...">
+          </div>
+          <table class="data-table">
+              <thead>
+                  <tr>
+                      <th>No</th>
+                      <th>ID</th>
+                      <th>Jenis Program</th>
+                      <th>Tujuan</th>
+                      <th>Tanggal Mulai</th>
+                      <th>Laporan</th>
+                      <th>Status Pimpinan</th>
+                      <th>Status Keuangan</th>
+                      <th>Cetak</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Isi tabel di sini -->
+                  <tr>
+                    <td>1</td>
+                    <td>1001</td>
+                    <td>Program A</td>
+                    <td>Tujuan A</td>
+                    <td>2023-11-15</td>
+                    <td><a href="#isi-laporan" class="blue">Laporan</a></td>
+                    <td>
+                      <div class="ket hijau">
+                        <div class="icon"></div>
+                        Sudah Benar
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ket merah">
+                        <div class="icon"></div>
+                        Revisi
+                      </div>
+                    </td>
+                    <td><button class="print">Cetak</button></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>PD002</td>
+                    <td>Training</td>
+                    <td>Surabaya</td>
+                    <td>2023-11-10</td>
+                    <td><a href="#isi-laporan" class="blue">Laporan</a></td>
+                    <td>
+                      <div class="ket hijau">
+                        <div class="icon"></div>
+                        Sudah Benar
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ket merah">
+                        <div class="icon"></div>
+                        Revisi
+                      </div>
+                    </td>
+                    <td><button class="print">Cetak</button></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>PD003</td>
+                    <td>Kunjungan Kerja</td>
+                    <td>Bandung</td>
+                    <td>2023-11-15</td>
+                    <td><a href="#isi-laporan" class="blue">Laporan</a></td>
+                    <td>
+                      <div class="ket hijau">
+                        <div class="icon"></div>
+                        Sudah Benar
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ket biru">
+                        <div class="icon"></div>
+                        Belum Dikonfirmasi
+                      </div>
+                    </td>
+                    <td><button class="print">Cetak</button></td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      </div>
+
+
+      <div id="tambah-permohonan" class="page">
+        <section class="header-tambah-permohonan">
+          <h1>Tambah Permohonan</h1>
+        </section>
+        <h1>Data Rencana Perjalanan Dinas</h1>
+        <section class="form-tambah">
+        <section class="kiri">
+          <div class="tambah-row">
+            <div class="field">Lokasi Tujuan</div>
+            <input type="text" id="lokasi-tujuan">
+          </div>
+          <div class="tambah-row">
+            <div class="field">Jenis Program</div>
+            <input type="text" id="jenis-program">
+          </div>
+          <div class="tambah-row">
+            <div class="field">Tanggal Mulai</div>
+            <input type="date" id="tanggal-mulai">
+          </div>
+          <div class="tambah-row">
+            <div class="field">Tanggal Selesai</div>
+            <input type="date" id="tanggal-selesai">
+          </div>
+          <div class="tambah-row">
+            <div class="field">Upload Data Pendukung</div>
+            <input type="file" id="upload-data ">
+          </div>
+        </section>
+        <section class="kanan">
+          <div class="tambah-row">
+            <div class="field">Pribadi/Kelompok</div>
+            <select id="jenis-entitas" name="jenis-entitas">
+              <option value="Prinadi">Pribadi</option>
+              <option value="Kelompok">Kelompok</option>
+            </select>
+          </div>
+          <div class="tambah-row">
+            <div class="field">Anggota Kelompok</div>
+            <select id="jenis-entitas" name="jenis-entitas">
+              <option value="Prinadi">Budi.S.T.</option>
+              <option value="Kelompok">Aryo,S.Pd.</option>
+            </select>
+          </div>
+          <div class="tambah-row">
+            <div class="field">Nama Anggota:</div>
+            <input type="text" id="nama-anggota" name="nama-anggota">
+          </div>
+          
+        </section>
+        </section>
+        <section class="simpan-perubahan">
+          <button id="save-changes">Simpan</button>
+        </section>
+      </div>
+
+
+      <div id="isi-laporan" class="page">
+        <section class="header-tambah-permohonan">
+          <h1>Laporan Aktivitas Perjalanan Dinas</h1>
+        </section>
+        <h1>Data Perjalanan Dinas</h1>
+        <div class="form-tambah">
+          <div class="bagian-atas">
+          <section class="kanan">
+            <p>Data Pelaku</p>
+            <div class="tambah-row">
+                <div class="field">Nama</div>
+                <input type="text" id="nama">
+            </div>
+            <div class="tambah-row">
+              <div class="field">NIP</div>
+              <input type="text" id="nip">
+            </div>
+            <div class="tambah-row">
+                <div class="field">Email</div>
+                <input type="email" id="email">
+            </div>
+            <div class="tambah-row">
+              <div class="field">No Telepon</div>
+              <input type="tel" id="telepon">
+            </div>
+          </section>
+          <section class="kiri">
+            <p>Daftar Anggota</p>
+            <div class="data-anggota">
+              <div class="no-anggota">1</div>
+            <div class="tambah-row">
+              <div class="field">Nama</div>
+              <input type="text" id="nama">
+            </div>
+            <div class="tambah-row">
+              <div class="field">NIP</div>
+              <input type="text" id="nip">
+            </div>
+            <div class="tambah-row">
+              <div class="field">Email</div>
+              <input type="email" id="email">
+            </div>
+            <div class="tambah-row">
+              <div class="field">No Telepon</div>
+              <input type="tel" id="telepon">
+            </div>
+            </div>
+          </section>
+          </div>
+          <div class="bagian-bawah">
+            <p>Info Detail</p>
+            <div class="tambah-row">
+              <div class="field">Lokasi Tujuan</div>
+              <input type="text" id="lokasi-tujuan">
+            </div>
+            <div class="tambah-row">
+              <div class="field">Jenis Program</div>
+              <input type="text" id="jenis-program">
+            </div>
+            <div class="tambah-row">
+              <div class="field">Tanggal Mulai</div>
+              <input type="date" id="tanggal-mulai">
+            </div>
+            <div class="tambah-row">
+              <div class="field">Tanggal Selesai</div>
+              <input type="date" id="tanggal-selesai">
+            </div>
+          </div>
+        </div>
+        <h1>Laporan</h1>
+        <div class="tambah-row">
+          <div class="field">Laporan</div>
+          <textarea id="laporan-aktivitas" name="laporan-aktivitas"></textarea>
+        </div>
+        <div class="tambah-row">
+          <div class="field">Upload Image</div>
+          <a href="foto.jpg" target="_blank">Lihat Foto</a>
+        </div>
+        <div class="selanjutnya">
+          <button><a href="#isi-laporan-keuangan">Selanjutnya</a></button>
+        </div>
+      </div>
+
+
+      <div id="isi-laporan-keuangan" class="page">
+        <h1>Laporan Keuangan</h1>
+        <table class="data-table">
+          <thead>
+          <tr>
+            <th>No</th>
+            <th>Perincian Biaya</th>
+            <th>Jumlah</th>
+            <th>Bukti</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>
+              <div class="jenis-biaya">Jenis Biaya 1</div>
+              <div class="keterangan">Keterangan Jenis Biaya 1</div>
+            </td>
+            <td>1000</td>
+            <td>
+              <input type="file" id="upload-data ">
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <div class="jenis-biaya">Jenis Biaya 2</div>
+              <div class="keterangan">Keterangan Jenis Biaya 2</div>
+            </td>
+            <td>2000</td>
+            <td>
+              <input type="file" id="upload-data ">
+            </td>
+          </tr>
+          <!-- Tambahkan baris tambahan sesuai kebutuhan -->
+        </tbody>
+        </table>
+        <div class="simpan-perubahan">
+        <button id="tambah-rincian-button">Tambah Rincian Biaya</button>
+        </div>
+        <!-- Form untuk menambah rincian biaya (semula dihidden) -->
+        <div id="tambah-rincian-form" class="hidden">
+          <input type="text" placeholder="Jenis Biaya">
+          <input type="text" placeholder="Keterangan Jenis Biaya">
+          <input type="text" placeholder="Nominal">
+          <div class="field">Upload Bukti</div>
+          <input type="file" id="upload-data ">
+          <button id="batal-button">Batal</button>
+          <button id="simpan-button">Simpan</button>
+        </div>
+    </div>
+  </div>
+  </div>
+  <script src="js/pegawai.js"></script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* navigasi */
+  .container {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .sidebar {
+    background: #B4B4B3;
+    color: #fff;
+    width: 250px;
+    padding: 20px;
+  }
+  
+  .logo img {
+    max-width: 100%;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  nav ul li {
+    margin-bottom: 10px;
+  }
+  
+  nav ul li span {
+    color: blue;
+  }
+  
+  
+  nav ul li.separator {
+    margin: 10px 0;
+    border-top: 1px solid #fff;
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+    color: #1AACAC;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .page {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .page:target {
+    display: block;
+  }
+  
+  .logout {
+    color: #2E97A7;
+    
+  }
+
+  /* dashboard */
+.dashboard {
+    background-color: #fff;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px; /* Mengubah sudut menjadi lebih lembut */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pegawai {
+    font-size: 18px; /* Mengurangi ukuran font Pegawai */
+    margin-top: 0;
+    margin-bottom: 10px; /* Mengurangi jarak antara Pegawai dan kotak-kotak */
+  }
+  
+  .box {
+    background-color: #e0e0e0;
+    border-radius: 10px; /* Mengubah sudut kotak menjadi lebih lembut */
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: left; 
+  }
+  
+  
+  .box:hover {
+    background-color: #004bad48;
+    transform: scale(1.05);
+  }
+  
+  .box h2 {
+    font-size: 20px;
+  }
+  
+  .status {
+    font-size: 16px;
+    margin-top: 10px;
+    color: white;
+    padding: 2px;
+    padding-left :5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .green {
+    background-color: rgb(91, 199, 91);
+    border-radius: 5px; /* Mengubah sudut atas kiri menjadi lebih lembut */
+  }
+  
+  .red {
+    background-color: rgb(243, 57, 57);
+    border-radius: 5px; /* Mengubah sudut atas kanan menjadi lebih lembut */
+  }
+  
+  .blue {
+    background-color: rgb(33, 33, 155);
+    border-radius: 5px; /* Mengubah sudut bawah kiri menjadi lebih lembut */
+  }
+  
+  /* profile */
+  .profile-container {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .profile-picture {
+    text-align: left;
+  }
+  
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  #change-picture {
+    display: block;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .profile-details {
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  .kiri, .kanan {
+    flex: 1; /* Memberikan lebar yang sama untuk keduanya */
+  }
+  
+  .kiri{
+    margin-left: 40px;
+  }
+  
+  
+  .simpan-perubahan{
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .profile-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .field {
+    width: 45%;
+    font-weight: bold;
+    flex-basis: 150px; 
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  textarea {
+    width: 45%;
+    padding: 5px;;
+  }
+  
+  #save-changes {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 30px;
+    align-self: flex-end; 
+  }
+
+   /* sppd */
+.table-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-column, .add-column {
+    padding: 5px;
+}
+
+.add-column{
+  margin-left: auto;
+}
+
+.search-column input {
+    width: 200px;
+    padding: 5px;
+}
+
+.atas-tabel{
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-column button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.data-table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Gaya untuk status dengan warna */
+.ket {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.ket .icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* Gaya untuk status yang berbeda */
+.hijau .icon {
+  background-color: green;
+}
+
+.merah .icon {
+  background-color: red;
+}
+
+.biru .icon {
+  background-color: blue;
+}
+
+/* Gaya tautan yang terlihat seperti tautan biasa */
+a {
+  text-decoration: none;
+  color: #007bff;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* tampil informasi */
+input[type="file"] {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .tambah-row{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .header-tambah-permohonan{
+    background-color: #1AACAC;
+    padding: 10px;
+  }
+  
+  .form-tambah {
+    margin-left: 20px;
+    display: flex;
+    justify-content: left;
+  }
+
+.bagian-atas {
+    display: flex;
+  }
+  
+  .bagian-bawah {
+    display: inline;
+    margin-left: 50px;
+  }
+  
+  .no-anggota{
+    border-radius :5px;
+    background-color: #1AACAC;
+    margin:0;
+    width:7%
+  }
+
+  .cetak-sppd #cetak{
+    background-color: #1AACAC;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+    /* tampil sppd */
+.upload-sppd{
+    margin: 10px;
+  }
+  
+    .upload-sppd #upload{
+      background-color: #1AACAC;
+      border-radius: 5px;
+      width: 100px;
+      height: 50px;
+      cursor: pointer;
+      margin: 10px;
+    }

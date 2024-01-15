@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aplikasi Perjalanan Dinas</title>
+  <link rel="stylesheet" type="text/css" href="css/admin.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+        <img src="img/logoworkaway.png" alt="Work Away">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li class="separator"></li>
+          <li><span>Perjalanan Dinas</span></li>
+          <li><a href="#data-pegawai">Data Pegawai</a></li>
+        </ul>
+      </nav>
+      <div class="logout">
+        <a href="#logout" class="btn-logout">Logout</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <div id="dashboard" class="page">
+        <h1>Dashboard</h1>
+        <p class="pegawai">Admin</p>
+        <div class="box">
+            <h2>Data Pegawai</h2>
+            <div class="status green">Online <span class="jumlah-angka">3</span></div>
+            <div class="status red">Offline<span class="jumlah-angka">2</span></div>
+        </div>
+      </div>
+
+
+      <div id="profile" class="page">
+        <h1>Profile</h1>
+        <p class="pegawai">Admin</p>
+        <div class="profile-container">
+          <div class="profile-picture">
+              <img src="profile.jpg" alt="Foto Profil">
+              <button id="change-picture">Ganti Foto Profil</button>
+          </div>
+          <div class="profile-details">
+            <section class="kanan">
+              <div class="profile-row">
+                  <div class="field">Nama</div>
+                  <input type="text" id="nama">
+              </div>
+              
+              <div class="profile-row">
+                  <div class="field">Email</div>
+                  <input type="email" id="email">
+              </div>
+              
+              <div class="profile-row">
+                  <div class="field">Tempat Lahir</div>
+                  <input type="text" id="tempat-lahir">
+              </div>
+              
+              <div class="profile-row">
+                  <div class="field">NPWP</div>
+                  <input type="text" id="npwp">
+              </div>
+              
+              <div class="profile-row">
+                  <div class="field">NIK</div>
+                  <input type="text" id="nik">
+              </div>
+              
+              <div class="profile-row">
+                  <div class="field">Golongan</div>
+                  <input type="text" id="golongan">
+              </div>
+              
+              <div class="profile-row">
+                  <div class="field">Alamat</div>
+                  <textarea id="alamat"></textarea>
+              </div>
+            </section>
+            <section class="kiri">
+              <div class="profile-row">
+                <div class="field">Password</div>
+                <input type="password" id="password">
+            </div>
+            <div class="profile-row">
+              <div class="field">No Telepon</div>
+              <input type="tel" id="telepon">
+          </div>
+          <div class="profile-row">
+            <div class="field">Tanggal Lahir</div>
+            <input type="date" id="tanggal-lahir">
+        </div>
+        <div class="profile-row">
+          <div class="field">Status Pegawai</div>
+          <input type="text" id="status-pegawai">
+        </div>
+        <div class="profile-row">
+          <div class="field">NIP</div>
+          <input type="text" id="nip">
+        </div>
+        <div class="profile-row">
+          <div class="field">Jenis Kelamin</div>
+          <input type="text" id="jenis-kelamin">
+      </div>
+      <section class="simpan-perubahan">
+      <button id="save-changes">Simpan Perubahan</button>
+      </section>
+    </section>
+          </div>
+      </div>
+      </div>
+
+      <div id="data-pegawai" class="page">
+        <h1>Data Pegawai</h1>
+        <p class="pegawai">Daftar Pegawai</p>
+        <div class="table-container">
+          <div class="atas-tabel">
+          <div class="search-column">
+              <input type="text" placeholder="Cari...">
+          </div>
+          </div>
+          <table class="data-table">
+              <thead>
+                  <tr>
+                      <th>No</th>
+                      <th>NIP</th>
+                      <th>Nama</th>
+                      <th>Status Pegawai</th>
+                      <th>Golongan</th>
+                      <th>Email</th>
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Isi tabel di sini -->
+                  <tr>
+                    <td>1</td>
+                    <td>2050</td>
+                    <td>Maryanto,S,Pd.</td>
+                    <td>-</td>
+                    <td>I</td>
+                    <td>Maryanto@gmail.com</td>
+                    <td><a href="#tampil-data-pegawai">Lihat Detail</a></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2050</td>
+                    <td>Maryanto,S,Pd.</td>
+                    <td>-</td>
+                    <td>I</td>
+                    <td>Maryanto@gmail.com</td>
+                    <td><a href="#tampil-data-pegawai">Lihat Detail</a></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>2050</td>
+                    <td>Maryanto,S,Pd.</td>
+                    <td>-</td>
+                    <td>I</td>
+                    <td>Maryanto@gmail.com</td>
+                    <td><a href="#tampil-data-pegawai">Lihat Detail</a></td>
+                  </tr>
+              </tbody>
+          </table>
+          <div class="tambah-pegawai">
+            <a href="#tambah-pegawai"><button>Tambah</button></a>
+          </div>
+      </div>
+      </div>
+
+      <div id="tampil-data-pegawai" class="page">
+        <h1>Data Pegawai</h1>
+        <div class="profile-container">
+            <div class="profile-picture">
+                <img src="profile.jpg" alt="Foto Profil">
+                <button id="change-picture">Ganti Foto Profil</button>
+            </div>
+            <div class="profile-details">
+              <section class="kanan">
+                <div class="profile-row">
+                    <div class="field">Nama</div>
+                    <input type="text" id="nama">
+                </div>
+                
+                <div class="profile-row">
+                    <div class="field">Email</div>
+                    <input type="email" id="email">
+                </div>
+                
+                <div class="profile-row">
+                    <div class="field">Tempat Lahir</div>
+                    <input type="text" id="tempat-lahir">
+                </div>
+                
+                <div class="profile-row">
+                    <div class="field">NPWP</div>
+                    <input type="text" id="npwp">
+                </div>
+                
+                <div class="profile-row">
+                    <div class="field">NIK</div>
+                    <input type="text" id="nik">
+                </div>
+                
+                <div class="profile-row">
+                    <div class="field">Golongan</div>
+                    <input type="text" id="golongan">
+                </div>
+                
+                <div class="profile-row">
+                    <div class="field">Alamat</div>
+                    <textarea id="alamat"></textarea>
+                </div>
+              </section>
+              <section class="kiri">
+                <div class="profile-row">
+                  <div class="field">Password</div>
+                  <input type="password" id="password">
+              </div>
+              <div class="profile-row">
+                <div class="field">No Telepon</div>
+                <input type="tel" id="telepon">
+            </div>
+            <div class="profile-row">
+              <div class="field">Tanggal Lahir</div>
+              <input type="date" id="tanggal-lahir">
+          </div>
+          <div class="profile-row">
+            <div class="field">Status Pegawai</div>
+            <input type="text" id="status-pegawai">
+          </div>
+          <div class="profile-row">
+            <div class="field">NIP</div>
+            <input type="text" id="nip">
+          </div>
+          <div class="profile-row">
+            <div class="field">Jenis Kelamin</div>
+            <input type="text" id="jenis-kelamin">
+        </div>
+        <section class="simpan-perubahan">
+        <button id="save-changes">Simpan Perubahan</button>
+        </section>
+      </section>
+            </div>
+        </div>
+      </div>
+
+      <div id="tambah-pegawai" class="page">
+        <h1>Tambah Data Pegawai</h1>
+        <div class="profile-container">
+            <div class="profile-picture">
+                <img src="profile.jpg" alt="Foto Profil">
+                <button id="change-picture">Ganti Foto Profil</button>
+            </div>
+            <div class="profile-details">
+              <section class="kanan">
+                <div class="profile-row">
+                    <div class="field">Nama</div>
+                    <input type="text" id="nama">
+                </div>
+                
+                <div class="profile-row">
+                    <div class="field">Email</div>
+                    <input type="email" id="email">
+                </div>
+                
+                <div class="profile-row">
+                    <div class="field">Tempat Lahir</div>
+                    <input type="text" id="tempat-lahir">
+                </div>
+                
+                <div class="profile-row">
+                    <div class="field">NPWP</div>
+                    <input type="text" id="npwp">
+                </div>
+                
+                <div class="profile-row">
+                    <div class="field">NIK</div>
+                    <input type="text" id="nik">
+                </div>
+                
+                <div class="profile-row">
+                    <div class="field">Golongan</div>
+                    <input type="text" id="golongan">
+                </div>
+                
+                <div class="profile-row">
+                    <div class="field">Alamat</div>
+                    <textarea id="alamat"></textarea>
+                </div>
+              </section>
+              <section class="kiri">
+                <div class="profile-row">
+                  <div class="field">Password</div>
+                  <input type="password" id="password">
+              </div>
+              <div class="profile-row">
+                <div class="field">No Telepon</div>
+                <input type="tel" id="telepon">
+            </div>
+            <div class="profile-row">
+              <div class="field">Tanggal Lahir</div>
+              <input type="date" id="tanggal-lahir">
+          </div>
+          <div class="profile-row">
+            <div class="field">Status Pegawai</div>
+            <input type="text" id="status-pegawai">
+          </div>
+          <div class="profile-row">
+            <div class="field">NIP</div>
+            <input type="text" id="nip">
+          </div>
+          <div class="profile-row">
+            <div class="field">Jenis Kelamin</div>
+            <input type="text" id="jenis-kelamin">
+        </div>
+        <section class="simpan-perubahan">
+        <button id="save-changes">Simpan</button>
+        </section>
+      </section>
+            </div>
+        </div>
+      </div>
+
+
+  </div>
+  </div>
+  <script src="js/keuangan.js"></script>
+</body>
+</html>
