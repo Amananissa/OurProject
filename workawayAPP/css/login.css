@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+
+  .logo{
+    max-width: 50%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+
+  .signup-section h1 {
+    color: #1AACAC; /* Warna teks biru */
+    font-weight: bold; /* Teks bold */
+    font-size: 50px;
+    margin-bottom: 0%;
+  }
+  
+  .signup-section h2 {
+    color: blue; /* Warna teks biru muda */
+    font-weight: normal; /* Teks tidak bold */
+    font-size:20px;
+    margin-top: 0%;
+  }
+
+
+  .continue-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+  }
+
+  .email-btn img {
+    max-width: fit-content; /* Mengatur ukuran gambar agar sesuai dengan lebar tombol */
+    height: fit-content; /* Menghindari distorsi gambar */
+  }
+
+  #logoworkaway {
+    max-width: 100px; /* Sesuaikan ukuran maksimum yang Anda inginkan */
+    height: auto; /* Menghindari distorsi gambar */
+  }
+  
+  #nip-email, #password {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    width: 100%; /* Agar tombol mengisi lebar penuh kontainer */
+    height: 40px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+  }
+
+
+
+  .login{
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #1AACAC;
+    border-radius: 5px;
+    width: 100%; /* Agar tombol mengisi lebar penuh kontainer */
+    height: 40px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+  }
+
+  .login:hover{
+    background-color: rgb(5, 5, 78);
+    color: white;
+  }
+
+  .login-section{
+    margin-top: 150px;
+  }
